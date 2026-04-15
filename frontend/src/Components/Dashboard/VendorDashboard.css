@@ -1,0 +1,174 @@
+:root {
+    --bg-dark: #120f0d;
+    --card-dark: #1c1917;
+    --accent-orange: #ff4d00;
+    --text-main: #ffffff;
+    --text-dim: #a1a1aa;
+}
+
+
+.dashboard-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 240px 1fr 320px;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--bg-dark);
+    padding: 40px 20px;
+    border-right: 1px solid #2d2d2d;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.dot {
+    color: var(--accent-orange);
+}
+
+.nav-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.nav-item.active {
+    background: var(--accent-orange);
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    min-height: 130vh;
+    padding: 40px;
+}
+
+.MainCont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+
+
+}
+
+.main-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    background: var(--card-dark);
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    width: 300px;
+}
+
+.banner {
+    background: linear-gradient(135deg, #2a1a10 0%, #1c1917 100%);
+    padding: 40px;
+    border-radius: 24px;
+    border-left: 5px solid var(--accent-orange);
+    margin-bottom: 30px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.dish-card {
+    background: var(--card-dark);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.dish-emoji {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    background: var(--accent-orange);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Right Panel */
+.right-panel {
+    background: var(--card-dark);
+    padding: 40px 20px;
+}
+
+.wallet-card {
+    background: #2a2725;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.wallet-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.wallet-actions button {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+.stats-grid {
+    height: 15vh;
+    width: 100%;
+    /* background-color: #646464; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1vw;
+}
+
+.stats-grid div {
+    height: 100%;
+    width: 30%;
+    background-color: #2a2725;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: #120f0d;
+    border: 1px solid orange;
+}
+
+.section-header {
+    height: 10vh;
+    width: 100%;
+}

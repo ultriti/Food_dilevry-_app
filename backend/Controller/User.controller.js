@@ -4,6 +4,7 @@ const userModel = require("../Model/user.model")
 
 // register user route
 module.exports.RegisterUser = async (req, res, next) => {
+    console.log("RegisterUser called with body:", req.body);
 
     const { Username, Email, Password } = req.body;
 
@@ -22,12 +23,18 @@ module.exports.RegisterUser = async (req, res, next) => {
             email: Email,
             password: Password,
             userName: Username,
-            role: "USER",
+            role: req.body.role || "User",
             phoneNumber: req.body.phoneNumber || null
 
 
         })
         await newUser.save()
+
+        if(newUser){
+            console.log("New user created:", newUser);
+        } else {
+            console.error("Failed to create user:", newUser);
+        }
 
         return res.status(201).json({ message: "user registered successfully" })
 
@@ -50,6 +57,8 @@ module.exports.RegisterUser = async (req, res, next) => {
 
 // user login register
 module.exports.userLogin = async (req, res, next) => {
+
+    console.log("userLogin called with body:", req.body);
 
     const { Email, Password } = req.body;
 

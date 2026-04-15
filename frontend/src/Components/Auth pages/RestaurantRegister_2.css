@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #151515;
+  color: #ffffff;
+}
+
+.restaurant-page {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 90, 31, 0.08), transparent 30%),
+    linear-gradient(180deg, #151515 0%, #121212 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant-card {
+  width: 100%;
+  max-width: 980px;
+  background: #1d1d1d;
+  border: 1px solid #2a2a2a;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.restaurant-header {
+  padding: 32px 40px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.restaurant-header h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.restaurant-header p {
+  margin: 12px 0 0;
+  font-size: 16px;
+  color: #a3a3a3;
+}
+
+.restaurant-form {
+  padding: 32px 40px 40px;
+}
+
+.promo-banner {
+  border: 1px solid #ff5a1f;
+  border-radius: 24px;
+  padding: 20px 22px;
+  margin-bottom: 28px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 90, 31, 0.18),
+    rgba(255, 90, 31, 0.03)
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 90, 31, 0.08);
+}
+
+.promo-banner h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.promo-banner p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #d4d4d4;
+}
+
+.form-grid {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.field input,
+.field textarea,
+.field select,
+.location-box input {
+  width: 100%;
+  border: 1px solid #343434;
+  background: #202020;
+  color: #ffffff;
+  outline: none;
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #6b6b6b;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus,
+.location-box input:focus {
+  border-color: #ff5a1f;
+  box-shadow: 0 0 0 4px rgba(255, 90, 31, 0.15);
+  background: #232323;
+}
+
+.location-box {
+  margin-bottom: 24px;
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid #3a2a22;
+  background: #191919;
+  box-shadow: inset 0 0 0 1px rgba(255, 90, 31, 0.04);
+}
+
+.location-box h3 {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ff5a1f;
+}
+
+.location-box .form-grid {
+  margin-bottom: 0;
+  gap: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 18px;
+  background: #ff5a1f;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px rgba(255, 90, 31, 0.28);
+}
+
+.submit-btn:hover {
+  background: #e94e16;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .restaurant-header h1 {
+    font-size: 38px;
+  }
+
+  .two-col,
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .restaurant-page {
+    padding: 20px 12px;
+  }
+
+  .restaurant-header,
+  .restaurant-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .restaurant-header h1 {
+    font-size: 30px;
+  }
+
+  .promo-banner h2 {
+    font-size: 18px;
+  }
+
+  .field input,
+  .field textarea,
+  .field select,
+  .location-box input {
+    border-radius: 16px;
+    padding: 14px 16px;
+  }
+}
